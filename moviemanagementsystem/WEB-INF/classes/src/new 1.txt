@@ -1,0 +1,1 @@
+javac -cp C:\xampp\tomcat\lib\servlet-api.jar -d C:\xampp\tomcat\webapps\moviemanagementsystem\WEB-INF\classes *.java

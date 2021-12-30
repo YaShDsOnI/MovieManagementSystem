@@ -1,0 +1,16 @@
+	home page :
+links to Profile,View Ratings,Edit Ratings,Add ratings.
+
+	Profile :
+Name,Email,Username
+links to Edit Profile.
+
+	View Ratings :
+Movie Name,Movie Rating,Movie Review,Director Name
+
+	Edit Rating :
+Movie Name,Movie Rating,Movie Review,Director Name
+
+	Add Rating :
+Movie Name,Movie Rating,Movie Review,Director Name
+

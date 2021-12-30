@@ -1,0 +1,16 @@
+							
+							
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+    
+        <html>
+		<body>
+			<%@page import="Model.User.UserDAO"%>
+            <%@page import="Model.User.User"%>
+            <%@page import="java.util.List"%>
+            <%
+				int srno = Integer.parseInt(request.getParameter("srno"));
+                UserDAO userDAO = new UserDAO();
+                User user = userDAO.updateUser(id);
+             %>
+		</body>
+        </html>

@@ -1,0 +1,49 @@
+package Model.Movie;
+ public class Movie {
+    protected int rno;
+    protected String moviename;
+    protected int rating;
+    protected String desc;
+
+    public Movie() {}
+
+    public Movie(String moviename, int rating, String desc) {
+        super();
+        this.moviename = moviename;
+        this.rating = rating;
+        this.desc = desc;
+    }
+
+    public Movie(int rno, String moviename, int rating, String desc) {
+        super();
+        this.rno = rno;
+        this.moviename = moviename;
+        this.rating = rating;
+        this.desc = desc;
+    }
+
+    public int getRno() {
+        return rno;
+    }
+    public void setRno(int rno) {
+        this.rno = rno;
+    }
+    public String getMoviename() {
+        return moviename;
+    }
+    public void setMoviename(String moviename) {
+        this.moviename = moviename;
+    }
+    public int getRating() {
+        return rating;
+    }
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+    public String getDesc() {
+        return desc;
+    }
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+}

@@ -1,0 +1,62 @@
+package Controller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Model.User.User;
+import Model.User.UserDAO;
+
+public class update extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    private UserDAO userDAO;
+	
+	public void init() {
+        userDAO = new UserDAO();
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+        doGet(request, response);
+    }
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    throws ServletException, IOException {
+        String action = request.getServletPath();
+
+        try {
+            switch (action) {
+                
+                case "/update":
+                    updateUser(request, response);
+                    break;
+                default:
+                    updateUser(request, response);
+                    break;
+            }
+        } catch (SQLException ex) {
+            throw new ServletException(ex);
+        }
+    }
+	
+	private void updateUser(HttpServletRequest request, HttpServletResponse response)
+    throws SQLException, IOException {
+        int srno = Integer.parseInt(request.getParameter("srno"));
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String username = request.getParameter("username");
+
+        User book = new User(srno, name, email, username);
+        userDAO.updateUser(book);
+        response.sendRedirect("list");
+    }
+	
+
+}
